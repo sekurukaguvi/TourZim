@@ -1,0 +1,43 @@
+/*  #Style Login + logo
+================================================*/
+login-layout-1 {
+  .item-input {
+    background-color: transparent;
+  }
+
+  img {
+    max-width: 100px;
+    margin: 40px auto;
+    display: block;
+  }
+
+  .text-input,
+  ion-label {
+    color: theme-colors('textColors', 'primary') !important;
+  }
+
+  .item-inner {
+    border-bottom-color: theme-colors('mainColors', 'secondary') !important;
+    box-shadow: none !important;
+  }
+
+  [default-button] {
+    margin-top: 20px;
+  }
+
+  .social {
+    margin: 20px auto 0;
+    overflow: hidden;
+
+    button {
+      margin: 1%;
+      width: 48.5%;
+      display: block;
+      float: left;
+    }
+
+    > button:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+﻿<!--Theme Styled cards-->
+<ion-content has-header>
+<ion-list no-margin>
+  <ion-slides (ionSlideDidChange)="slideHasChanged($event, i)">
+    <ion-slide>
+      <ion-card card-bcg text-left class="card" (click)="onEvent('onItemClick', item.title, $event)">
+        <div left class="card-img">
+          <img src="https://secure.i.telegraph.co.uk/multimedia/archive/02899/tulipnegrita_2899511b.jpg" />
+        </div>
+        <!--Card-content-->
+        <ion-card-content>
+          <ion-icon>
+            <i class="icon"></i>
+          </ion-icon>
+          <ion-card-title no-padding>
+            <h2 card-title>item.title</h2>
+          </ion-card-title>
+          <h3 card-subtitle>item.description</h3>
+          <h2 card-subtitle>item shortDescription Hi</h2>
+          <p card-body-text>item longDescription</p>
+          <!---Social share-->
+          <div right class="social">
+            <ion-icon>
+              <i icon-small ng-if="group.iconLike" class="icon " (click)="onEvent('onLike', item, $event)"></i>
+            </ion-icon>
+            <ion-icon>
+              <i icon-small ng-if="item.iconFavorite" class="icon " (click)="onEvent('onFavorite', item, $event)"></i>
+            </ion-icon>
+            <ion-icon>
+              <i icon-small ng-if="item.iconShare" class="icon " (click)="onEvent('onShare', item, $event)"></i>
+            </ion-icon>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <h1 wizard-title (click)="onClickEvent(i)">UNDO</h1>
+    </ion-slide>
+    <ion-slide>
+    </ion-slide>
+  </ion-slides>
+</ion-list>
+</ion-content>
+<!-- Fab Button -->
+<ion-fab bottom right>
+  <button button-ion-fab ion-fab (click)="onEvent('onFab', data, $event)">
+    <ion-icon name="add"></ion-icon>
+  </button>
+</ion-fab>
